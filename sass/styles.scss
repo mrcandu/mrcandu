@@ -1,0 +1,169 @@
+// Import Bootstrap Compass integration
+@import "bootstrap-compass";
+
+// Import custom Bootstrap variables
+@import "bootstrap-variables";
+
+// Import Bootstrap for Sass
+@import "bootstrap-conf";
+@import "bootstrap";
+
+//== Partials, Mixins & Extends =================================================================================================================/
+
+// Import custom Bootstrap variables
+@import "fonts";
+
+// Extend Classes
+.candu-bold {
+	font-weight:normal;font-family:'zipsonikregular';text-transform:uppercase;line-height:1em;
+}
+.candu-blocks {
+	h3,dt {font-size:1.2em;}
+	ul {list-style:none;padding:0;margin:0;}
+	.row:last-child,dl:last-child {margin-bottom:0;}
+	p:last-child{padding:0;margin:0;}
+}
+@mixin candu-fixed {
+	position:fixed;top: 0;z-index:10;width:100%;
+}
+
+//== Normal CSS =================================================================================================================/
+
+html {position: relative;min-height: 100%;}
+body {padding:0;margin:0;background:$candu-grey;}
+
+h1,h2,h3,h4,h5,h6,dt {@extend .candu-bold;margin:0;padding:0;margin-bottom:0.7em;}
+dt{margin-bottom:5px;}
+b,strong{font-weight:bold;color:#000}
+a:hover{text-decoration:none;}
+
+//================================================ Page Header
+
+.page-header {
+	background-color:$brand-primary;margin:0;border:0;color:#fff;padding:1em 0;
+	em{display:block;font-size:1.3em;font-style:normal;padding: 1.6em 0 0 0;}
+	h1{font-size:5.6em;margin:0;line-height:0.9em;
+		span{font-size:0.7em;}
+	}
+	img{float:right;width:300px;height:200px;}
+	@media (max-width:$screen-md-max) {
+		h1{font-size:4.7em;}
+	}
+	@media (max-width:$screen-sm-max) {
+		em{font-size:1.0em;padding: 1em 0 0 0;}
+		h1{font-size:2.8em;}
+		img{width:150px;height:auto;}
+	}
+	@media (max-width:$screen-xs-max) {
+		text-align:center;margin-bottom:1em;
+		img{float:none;margin-top:70px;width:200px;}
+	}
+}
+.page-header-xs img{float:none;};
+
+//================================================ Navbar
+
+.navbar {
+	background:$candu-charcoal !important;
+	border:none !important;
+	margin-bottom:1em;color:#fff;
+	line-height:$navbar-height;
+	h1 {@extend .candu-bold;font-size:1.8em;position:relative;top:3px;display:inline-block;}
+	img {height:40px;margin-right:20px;}
+	a{
+		color:$candu-grey-dark !important;
+		&:hover{color:$brand-primary !important;}
+	}
+	.active a {color:#fff !important;}
+	.navbar-collapse {float:right;}
+	.navbar-toggle{
+		background:$candu-charcoal-light;
+		&:hover{background:$brand-primary;}
+	}
+	@media (max-width:$screen-sm-max) {
+		font-size:0.9em;
+		img {height:30px;margin-right:20px;}
+	}
+	@media (max-width:$screen-xs-max) {
+		line-height:60px;
+		min-height:60px;
+		@include candu-fixed;
+		.navbar-collapse {float:none;}
+		.navbar-toggle{
+			margin:13px 0;
+		}
+	}
+}
+#nav.affix {@include candu-fixed;}
+
+
+//================================================ Row
+
+.row {margin-bottom:1em;}
+
+.breadcrumb{
+	@extend .candu-bold;
+	.active{color:$candu-charcoal}
+}
+.title{text-align:center;font-size:3em;}
+
+//================================================ Candu Block / Gallery
+
+.gallery {
+	a {
+		display:block;background:$candu-grey-dark;padding:18px 0 33px 15px;border:solid 0 #fff;border-right:solid 18px #fff;color:#fff;
+		&:hover {background:$brand-primary;}
+	}
+	span {display:block;background:$candu-charcoal;border:solid #000 10px;border-right-width:36px;border-left-width:36px;left:18px;position:relative;margin-bottom:0}
+	img {@extend .img-responsive, .center-block;}
+}
+
+//================================================ Panel
+
+.panel {
+	@extend .candu-blocks;border:none;background:none;
+	.panel-heading {@extend .candu-bold;font-size:1.3em;border:none;background:none;}
+	dl {
+		border-bottom:1px solid $candu-grey-dark;padding-bottom:1em;
+		 &:last-child {border-bottom:none;}
+	}
+}
+.panel.blank {
+	.panel-body {padding:0;}
+	.panel-heading {padding:0;padding-bottom:1em;}
+}
+
+
+//================================================  Jumbotron & Footer
+
+.candu-green {background-color:$candu-green;}
+.candu-charcoal {
+	background-color:$candu-charcoal;color:#999;
+	h1,h2,h3,h4,h5,h6,dt{
+		color:#fff;
+	}
+	a{
+		color:#fff;
+		&:hover{color:$brand-primary}
+	}
+}
+
+.jumbotron {@extend .candu-blocks}
+
+//================================================  Footer
+
+footer {
+	@extend .jumbotron;margin:0;font-size:0.9em;
+	dt{font-size:1.3em;}
+	p{font-size:1em;}
+}
+
+//================================================  Media Queries
+
+@media (max-width:$screen-sm-max) {
+	[class*="col-md-"]{margin-bottom: 15px;}
+}
+@media (max-width:$screen-xs-max) {
+	body{font-size:16px;}
+	[class*="col-sm-"]{margin-bottom: 15px;}
+}

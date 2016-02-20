@@ -1,0 +1,60 @@
+@font-face {
+  font-family: 'zipsonikregular';
+  src: url("../webfonts/zipsoniksml-webfont.eot");
+  src: url("../webfonts/zipsoniksml-webfont.eot?#iefix") format("embedded-opentype"), url("../webfonts/zipsoniksml-webfont.woff") format("woff"), url("../webfonts/zipsoniksml-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'kabel';
+  src: url("../webfonts/kabel_medium_regular-webfont.eot");
+  src: url("../webfonts/kabel_medium_regular-webfont.eot?#iefix") format("embedded-opentype"), url("../webfonts/kabel_medium_regular-webfont.woff") format("woff"), url("../webfonts/kabel_medium_regular-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'kabel';
+  src: url("../webfonts/kabel_demi_regular-webfont.eot");
+  src: url("../webfonts/kabel_demi_regular-webfont.eot?#iefix") format("embedded-opentype"), url("../webfonts/kabel_demi_regular-webfont.woff") format("woff"), url("../webfonts/kabel_demi_regular-webfont.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Flaticon";
+  src: url("../webfonts/flaticon.eot");
+  src: url("../webfonts/flaticon.eot#iefix") format("embedded-opentype"), url("../webfonts/flaticon.woff") format("woff"), url("../webfonts/flaticon.ttf") format("truetype"), url("../webfonts/flaticon.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 41, ../sass/fonts.scss */
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+  font-family: Flaticon;
+  font-size: 1.6em;
+  font-style: normal;
+}
+
+/* line 48, ../sass/fonts.scss */
+.flaticon-cat6:before {
+  content: "\e000";
+}
+
+/* line 51, ../sass/fonts.scss */
+.flaticon-logo85:before {
+  content: "\e001";
+}
+
+/* line 54, ../sass/fonts.scss */
+.flaticon-logo94:before {
+  content: "\e002";
+}
+
+/* line 57, ../sass/fonts.scss */
+.flaticon-logo95:before {
+  content: "\e003";
+}
+
+/* line 60, ../sass/fonts.scss */
+.flaticon-socialmedia20:before {
+  content: "\e004";
+}

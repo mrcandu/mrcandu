@@ -1,0 +1,64 @@
+//== Fonts
+
+$font-size-base:18px;
+$line-height-base:1.328571429;
+$font-family-base:kabel;
+
+//== Colors
+
+$candu-blue: #00adef;
+$candu-green: #64B6AC;
+$candu-yellow: #F3FFBD;
+$candu-charcoal: #232323;
+$candu-charcoal-light: lighten($candu-charcoal,10%);
+$candu-grey-dark: #bbbbbb;
+$candu-grey-mid: #cdcdcd;
+$candu-grey-mid-light: #dddddd;
+$candu-grey: #eeeeee;
+
+$brand-primary: $candu-blue;
+$gray-light: $candu-grey-dark;
+
+//== Base Colors
+
+$text-color: $candu-charcoal;
+$link-hover-color: #000000;
+
+//== Buttons
+
+$btn-primary-border: $brand-primary;
+$btn-default-color: #fff;
+$btn-default-bg: $candu-charcoal;
+$btn-default-border: $candu-charcoal;
+
+
+//== Radius & Padding
+$border-radius-base:0;
+$border-radius-large:0;
+$border-radius-small:0;
+$navbar-padding-horizontal:0;
+
+
+//== Navbar
+$navbar-height:75px;
+$navbar-margin-bottom:0;
+
+//== Jumbotron
+$jumbotron-padding:1em;
+$jumbotron-font-size: $font-size-base;
+$jumbotron-heading-font-size: floor(($font-size-base * 2.6));
+
+//== Breadcrumb
+$breadcrumb-bg: $candu-grey-mid-light;
+
+//== Forms
+$input-bg: #fff;
+$input-border: $candu-grey;
+
+// Defining values
+$screen-sm-min: 768px;
+$screen-xs-max: ($screen-sm-min - 1);
+$screen-md-min: 992px;
+$screen-sm-max: ($screen-md-min - 1);
+$screen-lg-min: 1200px;
+$screen-md-max: ($screen-lg-min - 1);
